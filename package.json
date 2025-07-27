@@ -6,7 +6,7 @@
   "publisher": "Kishan Savant",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NeoKish/vscode-yelp-reviewer"
+    "url": "https://github.com/NeoKish/vscode-yelp-style-reviewer"
   },
   "engines": {
     "vscode": "^1.74.0"
