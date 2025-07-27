@@ -1,0 +1,57 @@
+{
+  "name": "yelp-style-function-reviewer",
+  "displayName": "Yelp Style Function Reviewer",
+  "description": "A VS Code extension that gives your functions Yelp-style reviews (star ratings and witty comments).",
+  "version": "0.0.1",
+  "publisher": "Kishan Savant",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NeoKish/vscode-yelp-reviewer"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "functionReview.showReviewHistory",
+        "title": "Function Review: Show Review History"
+      },
+      {
+        "command": "functionReview.addCustomReview",
+        "title": "Function Review: Add Custom Review"
+      }
+    ],
+    "configuration": {
+    "title": "Function Review",
+    "properties": {
+      "functionReview.mode": {
+        "type": "string",
+        "default": "funny",
+        "enum": ["funny", "roast", "serious"],
+        "description": "Sets the tone of the function review comments."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.0.0",
+    "tslint": "^6.0.0"
+  },
+  "dependencies": {}
+}
