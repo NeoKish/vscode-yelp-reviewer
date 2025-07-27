@@ -54,7 +54,6 @@ export function getYelpReview(name?: string): string {
         ];
     }
 
-    // Rare easter egg reviews
     if (Math.random() < 0.02) {
         templates = [
             `One does not simply write ${base}. 🧙‍♂️`,
